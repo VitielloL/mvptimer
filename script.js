@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     function startMVPTimer(timerId, timeInputId, progressBarId, timeRemainingId, minDuration, maxDuration) {
         const button = document.getElementById(timerId);
+        const resetButton = document.getElementById(timerId + '-reset');
+        
         button.addEventListener('click', function() {
             const killTime = document.getElementById(timeInputId).value;
 
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 1000);
 
+            // Função para atualizar o display do tempo restante
             function updateTimer(remainingTime) {
                 const hours = Math.floor(remainingTime / 3600);
                 const minutes = Math.floor((remainingTime % 3600) / 60);
@@ -61,9 +64,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 timeRemainingText.textContent = `Tempo restante: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             }
+            
+            // Função para resetar o temporizador
+            resetButton.addEventListener('click', function() {
+                clearInterval(timer); // Para o temporizador atual
+                progressBar.style.width = '0%'; // Reseta a largura da barra de progresso
+                progressBar.classList.remove('green'); // Remove a classe verde
+                timeRemainingText.textContent = 'Tempo restante: 00:00:00'; // Reseta o texto
+                document.getElementById(timeInputId).value = ''; // Limpa o campo de entrada de tempo
+            });
         });
     }
 
+    // Adiciona a função startMVPTimer para cada MVP
     startMVPTimer('start-timer', 'kill-time', 'progress-bar', 'time-remaining', 1800, 12000); // Amalgamação de Maldade
     startMVPTimer('start-timer-loli1', 'kill-time-loli1', 'progress-bar-loli1', 'time-remaining-loli1', 1800, 3000); // Loli Luni 1
     startMVPTimer('start-timer-loli2', 'kill-time-loli2', 'progress-bar-loli2', 'time-remaining-loli2', 1800, 3000); // Loli Luni 2
