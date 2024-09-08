@@ -52,7 +52,7 @@ input[type="time"] {
 
 .mvp-image {
     max-width: 100%;
-    height: 100px; /* Tamanho fixo para a imagem */
+    height: 180px; /* Tamanho fixo para a imagem */
     object-fit: cover; /* Ajusta a imagem para cobrir o espaço reservado */
     border-radius: 10px;
     margin-bottom: 15px;
@@ -72,7 +72,7 @@ input[type="time"] {
     width: 0%;
 }
 
-#time-remaining {
+.time-remaining {
     margin-top: 10px;
     font-size: 18px;
 }
