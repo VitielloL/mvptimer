@@ -79,4 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     startMVPTimer('start-timer-loli1', 'kill-time-loli1', 'progress-bar-loli1', 'time-remaining-loli1', 3000); // Loli Luni 1
     startMVPTimer('start-timer-loli2', 'kill-time-loli2', 'progress-bar-loli2', 'time-remaining-loli2', 3000); // Loli Luni 2
     startMVPTimer('start-timer-loli3', 'kill-time-loli3', 'progress-bar-loli3', 'time-remaining-loli3', 3000); // Loli Luni 3
+    startMVPTimer('start-timer-desmorto1', 'kill-time-desmorto1', 'progress-bar-desmorto1', 'time-remaining-desmorto1', 3000); // Desmorto 1
+    startMVPTimer('start-timer-desmorto2', 'kill-time-desmorto2', 'progress-bar-desmorto2', 'time-remaining-desmorto2', 3000); // Desmorto 2
+    startMVPTimer('start-timer-desmorto3', 'kill-time-desmorto3', 'progress-bar-desmorto3', 'time-remaining-desmorto3', 3000); // Desmorto 3
 });
