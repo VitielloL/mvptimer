@@ -70,15 +70,16 @@ input[type="time"] {
     background-color: yellow;
     border-radius: 10px;
     width: 0%;
+    transition: background-color 0.3s ease;
+}
+
+.progress-bar.green {
+    background-color: green;
 }
 
 .time-remaining {
     margin-top: 10px;
     font-size: 18px;
-}
-
-#progress-bar.green {
-    background-color: green;
 }
 
 footer {
